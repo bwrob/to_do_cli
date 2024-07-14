@@ -1,0 +1,49 @@
+{
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            88
+        ]
+    },
+    "black-formatter.importStrategy": "fromEnvironment",
+    "codeium.enableConfig": {
+        "*": true
+    },
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorWidth": 3,
+    "editor.fontLigatures": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.mouseWheelZoom": true,
+    "editor.stickyScroll.enabled": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "indentRainbow.includedLanguages": [
+        "python"
+    ],
+    "indentRainbow.updateDelay": 50,
+    "isort.args": [
+        "--profile",
+        "black"
+    ],
+    "jupyter.askForKernelRestart": false,
+    "mypy-type-checker.importStrategy": "fromEnvironment",
+    "pylint.importStrategy": "fromEnvironment",
+    "python.languageServer": "Pylance",
+    "python.poetryPath": "poetry",
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "terminal.integrated.mouseWheelZoom": true,
+    "window.zoomLevel": -0.5,
+    "workbench.colorTheme": "Darcula Pycharm with Dark GUI",
+    "workbench.iconTheme": "file-icons",
+    "workbench.tree.indent": 20,
+    "workbench.tree.renderIndentGuides": "always"
+}
