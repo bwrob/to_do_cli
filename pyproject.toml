@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.poetry]
-name = "__python_repo_template"
+name = "to_do_cli"
 version = "0.1.0"
 authors = ["bwrob"]
 description = ""
@@ -13,6 +13,7 @@ packages = [{ include = "src" }, ]
 
 [tool.poetry.dependencies]
 python = "^3.12"
+typer = "*"
 
 [tool.poetry.group.dev.dependencies]
 black = {extras = ["jupyter"], version = "*"}
