@@ -29,6 +29,7 @@ isort = "*"
 scalene = "*"
 ruff = "*"
 pudb = "*"
+pytest = "*"
 
 [tool.black]
 target-version = ["py312"]
