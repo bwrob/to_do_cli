@@ -14,6 +14,8 @@ packages = [{ include = "src" }, ]
 [tool.poetry.dependencies]
 python = "^3.12"
 typer = "*"
+colorama = "*"
+shellingham = "*"
 
 [tool.poetry.group.dev.dependencies]
 black = {extras = ["jupyter"], version = "*"}
@@ -25,10 +27,11 @@ pre-commit = "*"
 pylint = "*"
 isort = "*"
 scalene = "*"
+ruff = "*"
+pudb = "*"
 
 [tool.black]
 target-version = ["py312"]
- 
 
 [tool.docformatter]
 recursive = true
@@ -37,10 +40,8 @@ black = true
 pre-summary-newline = true
 blank = true
 
-
 [tool.isort]
 profile = "black"
-
 
 [tool.mypy]
 python_version = "3.12"

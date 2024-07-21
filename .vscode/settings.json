@@ -22,6 +22,9 @@
     "editor.stickyScroll.enabled": true,
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
     "indentRainbow.includedLanguages": [
         "python"
     ],
@@ -33,7 +36,7 @@
     "jupyter.askForKernelRestart": false,
     "mypy-type-checker.importStrategy": "fromEnvironment",
     "pylint.importStrategy": "fromEnvironment",
-    "python.languageServer": "Pylance",
+    "python.languageServer": "None",
     "python.poetryPath": "poetry",
     "python.testing.pytestArgs": [
         "tests"
@@ -41,9 +44,59 @@
     "python.testing.pytestEnabled": true,
     "python.testing.unittestEnabled": false,
     "terminal.integrated.mouseWheelZoom": true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "after": [
+                "<Esc>"
+            ],
+            "before": [
+                "j",
+                "j"
+            ]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "after": [
+                "d",
+                "d"
+            ],
+            "before": [
+                "<leader>",
+                "d"
+            ]
+        },
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ] 
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "lineBreakInsert"
+            ],
+            "silent": true
+        }
+    ],
+    "vim.useCtrlKeys": true,
+    "vim.useSystemClipboard": true,
     "window.zoomLevel": -0.5,
     "workbench.colorTheme": "Darcula Pycharm with Dark GUI",
     "workbench.iconTheme": "file-icons",
     "workbench.tree.indent": 20,
-    "workbench.tree.renderIndentGuides": "always"
+    "workbench.tree.renderIndentGuides": "always",
+    "vim.easymotion": true
 }
