@@ -40,11 +40,23 @@ The project implements and enhances on the to-do CLI tool from tutotrial
 * Initializing the to-do database:
 
 ```bash
-python ./src/to_do.py init --db-path ./db/
+poetry run python -m to_do init --db-path ./db/
 ```
 
 * Adding a simple task:
 
 ```bash
-python ./src/to_do.py add 'clean shoes!'
+poetry run python -m to_do add 'clean shoes!'
+```
+
+* Listing all tasks
+
+```bash
+poetry run python -m to_do --verbose list-tasks
+```
+
+* Running tests
+
+```bash
+poetry run python -m pytest .\tests\
 ```

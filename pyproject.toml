@@ -9,7 +9,7 @@ version = "0.1.0"
 authors = ["bwrob"]
 description = ""
 readme = "README.md"
-packages = [{ include = "src" }, ]
+packages = [{ include = "to_do" }, ]
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -18,7 +18,7 @@ colorama = "*"
 shellingham = "*"
 
 [tool.poetry.group.dev.dependencies]
-black = {extras = ["jupyter"], version = "*"}
+black = {extras = ["all"], version = "*"}
 mypy = "*"
 docformatter = "*"
 jupyter = "*"
