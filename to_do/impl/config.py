@@ -18,23 +18,25 @@ CONFIG_FILE_PATH = CONFIG_DIR_PATH / CONFIG_FILE
 def init_app(db_path: Path) -> ReturnCode:
     """Initialize the application config.
 
+    Sets the database path in the config file.
+
     Args:
         db_path: The path to the database file.
     """
-    config_code = __init_config_file()
+    config_code = __check_config_path()
 
-    if config_code != ReturnCode.SUCCESS:
+    if config_code.is_error:
         return config_code
 
-    database_code = __create_database(db_path)
-    if database_code != ReturnCode.SUCCESS:
+    database_code = __set_database_path(db_path)
+    if database_code.is_error:
         return database_code
 
     return ReturnCode.SUCCESS
 
 
-def __init_config_file() -> ReturnCode:
-    """Initialize the config file."""
+def __check_config_path() -> ReturnCode:
+    """Check if the config folder and file exist."""
     try:
         CONFIG_DIR_PATH.mkdir(exist_ok=True)
     except OSError:
@@ -48,7 +50,7 @@ def __init_config_file() -> ReturnCode:
     return ReturnCode.SUCCESS
 
 
-def __create_database(db_path: Path) -> ReturnCode:
+def __set_database_path(db_path: Path) -> ReturnCode:
     """Create the database.
 
     Args:

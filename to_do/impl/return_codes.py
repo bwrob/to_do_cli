@@ -2,6 +2,8 @@
 
 from enum import IntEnum, auto
 
+import typer
+
 
 class ReturnCode(IntEnum):
     """Return codes."""
@@ -13,6 +15,25 @@ class ReturnCode(IntEnum):
     DB_WRITE_ERROR = auto()
     JSON_ERROR = auto()
     ID_ERROR = auto()
+
+    @property
+    def is_error(self) -> bool:
+        return self != ReturnCode.SUCCESS
+
+    @property
+    def message(self) -> str:
+        return ERROR_MESSAGES[self]
+
+    def report_if_error(
+        self,
+        pre_msg: str = "",
+    ) -> None:
+        if self.is_error:
+            typer.secho(
+                message=(f"{pre_msg} \n {self.message}"),
+                fg=typer.colors.RED,
+            )
+            raise typer.Exit(code=1)
 
 
 ERROR_MESSAGES = {
