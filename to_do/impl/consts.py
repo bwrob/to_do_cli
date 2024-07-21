@@ -1,0 +1,2 @@
+GENERAL = "general"
+DATABASE = "database"
