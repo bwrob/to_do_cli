@@ -1,23 +1,15 @@
 """CLI commands."""
 
-import rich
-
-from to_do.impl.app import app
-
-"""This module provides the RP To-Do CLI."""
-# rptodo/cli.py
-
 from pathlib import Path
 from typing import Optional
 
 import typer
 
+from to_do.impl.app import app
 from to_do.impl.config import init_app
 from to_do.impl.database import DEFAULT_DB_FILE_PATH, init_database
-from to_do.impl.return_codes import ERROR_MESSAGES
 
-app = typer.Typer()
-
+# pyright: reportAny=false
 DB_PATH_INPUT = typer.Option(
     str(DEFAULT_DB_FILE_PATH),
     "--db-path",
@@ -45,24 +37,6 @@ def init(
 
 
 @app.command()
-def add(task: str):
-    """Add a task."""
-    rich.print(f"Adding task: {task}")
-
-
-@app.command()
-def edit(task_id: int, task: str):
-    """Edit a task."""
-    rich.print(f"Editing task: {task_id} {task}")
-
-
-@app.command()
-def remove(task_id: int):
-    """Remove a task."""
-    rich.print(f"Removing task: {task_id}")
-
-
-@app.command()
-def list_tasks():
+def list_tasks() -> None:
     """List all tasks."""
-    rich.print("Listing all tasks")
+    print("Listing all tasks")

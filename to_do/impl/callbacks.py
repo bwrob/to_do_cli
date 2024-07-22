@@ -8,14 +8,24 @@ from to_do import __app_name__, __version__
 from to_do.impl.app import app, state
 
 
-def __version_callback(value: bool):
-    if value:
+def __version_callback(show: bool):
+    """Show the application's version.
+
+    Args:
+        show: Whether or not to show the version.
+    """
+    if show:
         typer.echo(f"{__app_name__} v{__version__}")
         raise typer.Exit()
 
 
-def __verbose_callback(value: bool) -> None:
-    state["verbose"] = value
+def __verbose_callback(is_verbose: bool) -> None:
+    """Set the verbose flag.
+
+    Args:
+        is_verbose: The new value for the verbose flag.
+    """
+    state["verbose"] = is_verbose
 
 
 # pyright: reportAny=false

@@ -98,5 +98,6 @@
     "workbench.iconTheme": "file-icons",
     "workbench.tree.indent": 20,
     "workbench.tree.renderIndentGuides": "always",
-    "vim.easymotion": true
+    "vim.easymotion": true,
+    "files.autoSave": "onFocusChange"
 }
