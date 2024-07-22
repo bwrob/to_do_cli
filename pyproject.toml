@@ -9,14 +9,16 @@ version = "0.1.0"
 authors = ["bwrob"]
 description = ""
 readme = "README.md"
-packages = [{ include = "src" }, ]
+packages = [{ include = "to_do" }, ]
 
 [tool.poetry.dependencies]
 python = "^3.12"
 typer = "*"
+colorama = "*"
+shellingham = "*"
 
 [tool.poetry.group.dev.dependencies]
-black = {extras = ["jupyter"], version = "*"}
+black = {extras = ["all"], version = "*"}
 mypy = "*"
 docformatter = "*"
 jupyter = "*"
@@ -25,10 +27,12 @@ pre-commit = "*"
 pylint = "*"
 isort = "*"
 scalene = "*"
+ruff = "*"
+pudb = "*"
+pytest = "*"
 
 [tool.black]
 target-version = ["py312"]
- 
 
 [tool.docformatter]
 recursive = true
@@ -37,10 +41,8 @@ black = true
 pre-summary-newline = true
 blank = true
 
-
 [tool.isort]
 profile = "black"
-
 
 [tool.mypy]
 python_version = "3.12"
