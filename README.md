@@ -7,7 +7,7 @@ It leverages the powerful `typer` package for a user-friendly CLI experience.
 The project implements and enhances on the to-do CLI tool from tutotrial
 [Build a Command-Line To-Do App With Python and Typer](https://realpython.com/python-typer-cli/).
 
-## Key Technologies:
+## Key Technologies
 
 * [**`typer`**](https://github.com/tiangolo/typer-cli):
     simplified CLI development
@@ -41,12 +41,6 @@ The project implements and enhances on the to-do CLI tool from tutotrial
 
 ```bash
 poetry run python -m to_do init --db-path ./db/
-```
-
-* Adding a simple task:
-
-```bash
-poetry run python -m to_do add 'clean shoes!'
 ```
 
 * Listing all tasks
